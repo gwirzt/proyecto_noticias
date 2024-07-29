@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News</title>
+</head>
+<body>
+    <h1>News</h1>
+    <ul>
+        {% for article in articles %}
+            <li>{{ article.title }} - {{ article.published_date }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
