@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-nqd)(epv#a_jw$t&xf(mze6fnx61a((!4-81xozs-_v)jcb-_1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.35']
 NEWS_API_KEY = '7939d2aefc22439bbf16da778c2c2628'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
