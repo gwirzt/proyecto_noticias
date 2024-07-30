@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'noticias',
     'rest_framework',
-    'rest_framework_simplejwt', 
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -80,10 +80,25 @@ WSGI_APPLICATION = 'noticias_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'riverasAfuera',
+        'USER': 'sa',
+        'PASSWORD': 'Nacion1846',
+        'HOST': '192.168.0.3',
+        'PORT': '1433',
+
+        'OPTIONS': {
+            'driver': 'ODBC Driver 11 for SQL Server',
+            'extra_params': 'TrustServerCertificate=yes',
+        },
     }
 }
 
