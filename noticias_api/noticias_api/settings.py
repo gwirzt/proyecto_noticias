@@ -86,17 +86,18 @@ WSGI_APPLICATION = 'noticias_api.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
+        'ENGINE': 'sql_server.pyodbc',
         'NAME': 'riverasAfuera',
         'USER': 'sa',
-        'PASSWORD': 'Nacion1846',
-        'HOST': '192.168.0.3',
+        'PASSWORD': 'QlftA',
+        'HOST': 'localhost',
         'PORT': '1433',
 
         'OPTIONS': {
-            'driver': 'ODBC Driver 11 for SQL Server',
+            'driver': 'ODBC Driver 17 for SQL Server',
             'extra_params': 'TrustServerCertificate=yes',
         },
     }
